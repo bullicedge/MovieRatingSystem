@@ -17,6 +17,7 @@ import java.util.List;
 public class RequestUser {
 
     Integer id;
+
     String fname;
     String lname;
     String phoneNo;

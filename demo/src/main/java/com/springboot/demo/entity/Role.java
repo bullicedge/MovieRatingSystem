@@ -2,12 +2,12 @@ package com.springboot.demo.entity;
 
 public enum Role {
 
-    Edit("edit"),
-    View("view"),
-    NoAccess("noaccess");
-    String name;
+    EDIT("edit"),
+    VIEW("view"),
+    NO_ACCESS("noaccess");
+    private final String name;
 
-    Role(String name) {
+   private Role(String name) {
         this.name = name;
     }
 

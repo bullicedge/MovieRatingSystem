@@ -5,8 +5,11 @@ import com.springboot.demo.dto.response.GenericResponse;
 import com.springboot.demo.dto.response.ResponseMovie;
 import com.springboot.demo.entity.Movie;
 import com.springboot.demo.service.MovieService;
+import org.apache.commons.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.logging.Logger;
 
 @RestController
 @RequestMapping("/movie")
@@ -14,6 +17,10 @@ public class MovieController {
 
     @Autowired
     MovieService movieService;
+
+
+    Logger LOG = Logger.getLogger(MovieController.class.getName());
+
 @PostMapping("/add/movie")
     public GenericResponse addMovie(@RequestBody RequestMovie requestMovie){
 

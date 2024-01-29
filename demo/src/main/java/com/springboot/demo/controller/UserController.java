@@ -6,6 +6,8 @@ import com.springboot.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.logging.Logger;
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -13,9 +15,13 @@ public class UserController {
 @Autowired
 UserService userService;
 
+
+    Logger LOG = Logger.getLogger(UserController.class.getName());
 @PostMapping("/createuser")
     public GenericResponse createUser(@RequestBody RequestUser requestUser){
- System.out.println("controller" + requestUser.toString());
+ //System.out.println("controller" + requestUser.toString());
+    LOG.info("controller" + requestUser.toString());
+    LOG.info("jfdkfjhd");
     return userService.createUser(requestUser);
 }
 
